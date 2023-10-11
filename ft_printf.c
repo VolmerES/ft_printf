@@ -6,64 +6,108 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:03:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/09 22:05:17 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/11 16:56:25 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
-void	ft_putstr_fd(char*s);
+#include <string.h>
 
-int	ft_write (char const *f, va_list ap)
+#define MAYSYMB "0123456789ABCDEF"
+#define MINSYMB "0123456789abcdef"
+
+int	ft_putstr(char*s);
+
+int	ft_putnbr_base(long long nb, int base, char *symbols);
+
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_format (char const *f, va_list ap)
 {
 	int		count;
 	char 	o;
 
 	count = 0;
 	if (*f == 'c')
-	{
-		o = va_arg(ap, int);
-		count += write (1, &o, 1);
-	}
+		return (ft_putchar(va_arg(ap, int)));
 	else if (*f == 's')
-	{
-		ft_putstr_fd(va_arg(ap, char *));
-	}
+		return (ft_putstr(va_arg(ap, char *)));
+	else if (*f == 'p')
+		return (ft_putstr("0x")
+				+ ft_putnbr_base(va_arg(ap, unsigned long long), 16, MINSYMB));
+	else if (*f == 'i' || *f == 'd')
+		return (ft_putnbr_base(va_arg(ap, int), 10, NULL));
+	else if (*f == 'x')
+		return (ft_putnbr_base(va_arg(ap, int), 16, MINSYMB));
+	else if (*f == 'X')
+		return (ft_putnbr_base(va_arg(ap, int), 16, MAYSYMB));
+	else if (*f == 'u')
+		return (ft_putnbr_base(va_arg(ap, unsigned int), 10, NULL));
 	return (count);
 }
 
 int	ft_printf(char const *f, ...)
 {
-	va_list		ap;
-	va_start	(ap, f);
 	int			counter;
+	va_list		ap;
 
+	va_start	(ap, f);
 	counter = 0;
 	while (*f != '\0')
 	{
 		if (*f == '%')
 		{
-			if (*f + 1 != '%')
-			ft_write(f + 1, ap);
-			else
-				write(1, "%", 1);
+			if (*(f + 1) == '%')
+			{
+				counter += ft_putchar(*(f + 1));
+			}
+			if (*(f + 1) != '%')
+				counter += ft_format(f + 1, ap);
+			f++;
 		}
+		else
+			counter += ft_putchar(*f);
 		f++;
 	}
 	va_end (ap);
+	printf("--->%i \n", counter);
 	return (counter);
 }
 
 int	main()
 {
+	char a = 'a';
 	char z = 'z';
 	char *s = "Hola 42";
-	ft_printf("Carácter único: %c \n", z);
+	void *p;
+	int i = -10;
+	int x = 1234;
+	int xy = -1234;
+
+	p = &s;
+	ft_printf("Carácter único: %c", z);
 	printf("\n");
-	ft_printf("String: %s \n", s);
+	ft_printf("String: %s", s);
 	printf("\n");
-	ft_printf("Porcentaje; %%");
+	ft_printf("Porcentaje; %%aaa");
+	printf("\n");
+	ft_printf("Direccion puntero; %p", p);
+	printf("\n");
+	ft_printf("Numero entero %i", i);
+	printf("\n");
+	ft_printf("Numero decimal %d", i);
+	printf("\n");
+	ft_printf("Numero MIN hex: %x", x);
+	printf("\n");
+	ft_printf("Numero MAY hex: %X", x);
+	printf("\n");
+	ft_printf("Numero unsigned: %u", xy);
 	printf("\n");
 	return (0);
-}
+ }

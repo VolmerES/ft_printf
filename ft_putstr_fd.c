@@ -6,13 +6,11 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:36:17 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/11 16:59:15 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:18:47 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-size_t	ft_strlen(const char *str);
+#include "libpr.h"
 
 int	ft_putstr(char *s)
 {

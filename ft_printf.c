@@ -6,21 +6,11 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:03:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/11 16:56:25 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:23:30 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-
-#define MAYSYMB "0123456789ABCDEF"
-#define MINSYMB "0123456789abcdef"
-
-int	ft_putstr(char*s);
-
-int	ft_putnbr_base(long long nb, int base, char *symbols);
+#include "libpr.h"
 
 int	ft_putchar(char c)
 {
@@ -31,7 +21,6 @@ int	ft_putchar(char c)
 int	ft_format (char const *f, va_list ap)
 {
 	int		count;
-	char 	o;
 
 	count = 0;
 	if (*f == 'c')
@@ -82,7 +71,6 @@ int	ft_printf(char const *f, ...)
 
 int	main()
 {
-	char a = 'a';
 	char z = 'z';
 	char *s = "Hola 42";
 	void *p;

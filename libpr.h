@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libpr.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 16:46:52 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/11 17:19:06 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/10/11 17:10:53 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/10/11 17:20:20 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libpr.h"
+#ifndef LIBPR_H
+# define LIBPR_H
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
 
-int	ft_strlen(const char *str)
-{
-	int	i;
+#define MAYSYMB "0123456789ABCDEF"
+#define MINSYMB "0123456789abcdef"
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+int	ft_putstr(char *s);
+int	ft_strlen(const char *str);
+int	ft_putchar_fd(char c, int fd);
+int	ft_putnbr_base(long long nb, int base, char *symbols);
+
+#endif

@@ -1,4 +1,4 @@
-NAME = libpr.a
+NAME = libftprintf.a
 SRC = ft_printf.c \
 	  ft_putchar_fd.c \
 	  ft_putnbr_base.c \
@@ -7,7 +7,6 @@ SRC = ft_printf.c \
 
 OBJS = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
-OBJS_BONUS = $(SRC_BONUS:.c=.o )
 
 all : $(NAME)
 
@@ -17,7 +16,6 @@ $(NAME) : $(OBJS)
 %.o : %.c
 	@gcc -c $(CFLAGS) $?
 
-.PHONY : clean fclean bonus
 clean:
 	@rm -f *.o
 
@@ -26,3 +24,4 @@ fclean: clean
 
 re: fclean all
 
+.PHONY : clean fclean bonus

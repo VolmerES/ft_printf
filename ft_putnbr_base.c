@@ -6,13 +6,13 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 12:49:57 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/11 17:20:02 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:02:23 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libpr.h" 
 
-int	ft_putnbr_base(long long nb, int base, const char *minomay)
+int	ft_putnbr_base(long long nb, int base, char *minomay)
 {
 	int count;
 

@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:03:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/11 17:23:30 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:07:11 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	ft_printf(char const *f, ...)
 	printf("--->%i \n", counter);
 	return (counter);
 }
-
+/*
 int	main()
 {
 	char z = 'z';
@@ -98,4 +98,4 @@ int	main()
 	ft_printf("Numero unsigned: %u", xy);
 	printf("\n");
 	return (0);
- }
+ }*/

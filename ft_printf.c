@@ -6,11 +6,11 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:03:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/13 16:07:11 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:24:30 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libpr.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
@@ -65,11 +65,11 @@ int	ft_printf(char const *f, ...)
 		f++;
 	}
 	va_end (ap);
-	printf("--->%i \n", counter);
+	//printf("--->%i \n", counter);
 	return (counter);
 }
-/*
-int	main()
+
+/*int	main()
 {
 	char z = 'z';
 	char *s = "Hola 42";
@@ -99,3 +99,8 @@ int	main()
 	printf("\n");
 	return (0);
  }*/
+
+int main()
+{
+	printf("juan aqui va %s y despues esto\n", NULL);
+}

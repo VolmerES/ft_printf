@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libpr.h" 
+#include "ft_printf.h" 
 
 int	ft_putnbr_base(long long nb, int base, char *minomay)
 {

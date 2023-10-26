@@ -48,7 +48,7 @@ The "strict" tests do not work correctly, the function does not return -1 and la
 ```bash
 $ paco -s
 ```
-The "strict" tests do not work correctly, the function does not return -1 and lacks certain protections...
+
 ## 🗒️ NOTES 🗒️
 
 The bonus part of the project is not included.

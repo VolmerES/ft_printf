@@ -1,6 +1,6 @@
 NAME = libftprintf.a
+CC = gcc
 SRC = ft_printf.c \
-	  ft_putchar_fd.c \
 	  ft_putnbr_base.c \
 	  ft_putstr_fd.c \
 	  ft_strlen.c
@@ -14,14 +14,14 @@ $(NAME) : $(OBJS)
 	@ar -crs  $@ $?
 
 %.o : %.c
-	@gcc -c $(CFLAGS) $?
+	@$(CC) -c $(CFLAGS) $?
 
 clean:
-	@rm -f *.o
+	@rm -f $(OBJS)
 
 fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY : clean fclean bonus
+.PHONY : clean fclean

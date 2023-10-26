@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:03:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/13 16:24:30 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:15:08 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-int	ft_format (char const *f, va_list ap)
+int	ft_format(char const *f, va_list ap)
 {
 	int		count;
 
@@ -29,13 +29,13 @@ int	ft_format (char const *f, va_list ap)
 		return (ft_putstr(va_arg(ap, char *)));
 	else if (*f == 'p')
 		return (ft_putstr("0x")
-				+ ft_putnbr_base(va_arg(ap, unsigned long long), 16, MINSYMB));
+			+ ft_putnbr_base(va_arg(ap, unsigned long long), 16, MINSYMB));
 	else if (*f == 'i' || *f == 'd')
 		return (ft_putnbr_base(va_arg(ap, int), 10, NULL));
 	else if (*f == 'x')
-		return (ft_putnbr_base(va_arg(ap, int), 16, MINSYMB));
+		return (ft_putnbr_base(va_arg(ap, unsigned int), 16, MINSYMB));
 	else if (*f == 'X')
-		return (ft_putnbr_base(va_arg(ap, int), 16, MAYSYMB));
+		return (ft_putnbr_base(va_arg(ap, unsigned int), 16, MAYSYMB));
 	else if (*f == 'u')
 		return (ft_putnbr_base(va_arg(ap, unsigned int), 10, NULL));
 	return (count);
@@ -46,7 +46,7 @@ int	ft_printf(char const *f, ...)
 	int			counter;
 	va_list		ap;
 
-	va_start	(ap, f);
+	va_start (ap, f);
 	counter = 0;
 	while (*f != '\0')
 	{
@@ -65,11 +65,10 @@ int	ft_printf(char const *f, ...)
 		f++;
 	}
 	va_end (ap);
-	//printf("--->%i \n", counter);
 	return (counter);
 }
-
-/*int	main()
+/*
+int	main()
 {
 	char z = 'z';
 	char *s = "Hola 42";
@@ -99,8 +98,3 @@ int	ft_printf(char const *f, ...)
 	printf("\n");
 	return (0);
  }*/
-
-int main()
-{
-	printf("juan aqui va %s y despues esto\n", NULL);
-}

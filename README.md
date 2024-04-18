@@ -41,6 +41,8 @@ ft_printf is a custom implementation of the C standard library function printf i
 
 ## How does it work?
 
+---
+
 1. Clona este repositorio y entra en él, asegúrate de que se llama:
 
 ```bash
@@ -75,7 +77,7 @@ make re - usa fclean + all, recompila libft
 
 ---
 
-[Francinette]([https://www.notion.soFrancinette](https://github.com/xicodomingues/francinette))
+[Francinette](https://www.notion.soFrancinette](https://github.com/xicodomingues/francinette)
 
 **To standart test, go to the library path and run:**
 
@@ -96,8 +98,6 @@ $ paco -s
 The “strict” tests do not work correctly, the function does not return -1 and lacks certain protections…
 
 ## Notes
-
----
 
 The bonus part of the project is not included.
 

@@ -13,13 +13,13 @@
 
 ## Table of Contents
 
-1. [What is ft_printf?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
-2. [What’s inside?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
-3. [How does it work?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
-4. [How to test ?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
-5. [Notes](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
-6. [About Me](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
-7. [License](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+1. [What is ft_printf?](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#what-is-ft_printf)
+2. [What’s inside?](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#whats-inside)
+3. [How does it work?](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#how-does-it-work)
+4. [How to test ?](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#how-to-test-)
+5. [Notes](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#notes)
+6. [About Me](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#-about-me)
+7. [License](https://github.com/VolmerES/ft_printf?tab=readme-ov-file#license)
 
 ## What is ft_printf?
 
@@ -75,7 +75,7 @@ make re - usa fclean + all, recompila libft
 
 ---
 
-[https://www.notion.soFrancinette](https://www.notion.soFrancinette)
+[Francinette]([https://www.notion.soFrancinette](https://github.com/xicodomingues/francinette))
 
 **To standart test, go to the library path and run:**
 

@@ -1,66 +1,116 @@
-![Logo](https://www.42network.org/wp-content/themes/e42-network/img/42-network-logo.svg)
-# 🖨️ ABOUT FT_PRINTF 🖨️
+
+---
+
+![cover-ft_printf.png](img/cover-ft_printf.png)
+
+## Because putnbr() and putstr() are not enough…
+
+---
+
+## Evaluation:
+
+![Screen Shot 2024-04-18 at 12.55.12 PM.png](img/Screen_Shot_2024-04-18_at_12.55.12_PM.png)
+
+## Table of Contents
+
+1. [What is ft_printf?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+2. [What’s inside?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+3. [How does it work?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+4. [How to test ?](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+5. [Notes](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+6. [About Me](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+7. [License](https://www.notion.so/Printf-Readme-c6233f0ec7234a818d3b524e93278b40?pvs=21)
+
+## What is ft_printf?
+
+---
 
 ft_printf is a custom implementation of the C standard library function printf in C. This project provides a versatile and extensible printf function that can be used to format and print various data types to the standard output. It offers a comprehensive set of format specifiers, allowing you to control the appearance of data in your C programs. Designed as a learning exercise, this printf implementation serves as a useful educational tool for understanding string formatting and variadic functions in C
 
+## What’s inside?
 
-## 📝 Instructions 📝
-1.- Compile
+---
 
-To compile, go to the library path and run:
+| Functions | Other |
+| --- | --- |
+| ft_printf.c | Makefile |
+| ft_putnbr_base.c | ft_printf.h |
+| ft_strlen.c |  |
+| ft_putstr_fd.c |  |
+| ft_putchar_fd.c |  |
+
+## How does it work?
+
+1. Clona este repositorio y entra en él, asegúrate de que se llama:
 
 ```bash
-$ make
+git clone <https://github.com/VolmerES/ft_printf.git>
+cd ft_printf/
 ```
 
-2.- Usage
+1. Ejecuta Make para que puedas construir la biblioteca:
 
-To use the library functions in your code, simply include its header:
+```bash
+make
+```
 
+### Otras reglas del makefile que puedes usar:
+
+```bash
+make - compila los archivos obligatorios de libft
+make bonus - compila los archivos bonus de libft
+make all - compila todos los archivos (obligatorios + bonus)
+make clean - elimina todos los archivos *.o
+make fclean - elimina todos los archivos *.o y *.a (ejecutables)
+make re - usa fclean + all, recompila libft
+```
+
+1. Para incluirlo en tu código, incluye la cabecera
 
 ```c
-#include "ft_printf.h"
-
+#include 'ft_printf.h"
 ```
-## 🔎 What's inside? 🔎
 
-| Functions             | Other                                                              |
-| ----------------- | ------------------------------------------------------------------ |
-| ft_printf.c | Makefile|
-| ft_putnbr_base.c | ft_printf.h|
-| ft_strlen.c |
-| ft_putstr_fd.c|
-| ft_putchar_fd.c|
+## How to test ?
 
-## ⚒️ Testing ⚒️
+---
 
-[![Francinette Tester 🔗](Francinette)](https://github.com/xicodomingues/francinette)
+[https://www.notion.soFrancinette](https://www.notion.soFrancinette)
 
 **To standart test, go to the library path and run:**
 
-All standard tests should work perfectly. 
+All standard tests should work perfectly.
+
 ```bash
 $ paco
 ```
+
 **To strict test, go to the library path and run:**
 
-The "strict" tests do not work correctly, the function does not return -1 and lacks certain protections...
+The “strict” tests do not work correctly, the function does not return -1 and lacks certain protections…
+
 ```bash
 $ paco -s
 ```
-The "strict" tests do not work correctly, the function does not return -1 and lacks certain protections...
-## 🗒️ NOTES 🗒️
+
+The “strict” tests do not work correctly, the function does not return -1 and lacks certain protections…
+
+## Notes
+
+---
 
 The bonus part of the project is not included.
 
-
 ## 🚀 About Me
-I'm 42Network student at 42Madrid(Spain)
 
-You I track my progress through the common core at: 
+I’m 42Network student at 42Madrid(Spain)
 
-[![Intra 42 🔗]()](https://projects.intra.42.fr/projects/graph?login=jdelorme)
+You I track my progress through the common core at:
 
 More about:
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-bautista-delorme-pinedo-000697264/)
+[https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://www.notion.so/LICENSE.md) file for details.

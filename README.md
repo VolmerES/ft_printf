@@ -77,7 +77,7 @@ make re - usa fclean + all, recompila libft
 
 ---
 
-[Francinette](https://www.notion.soFrancinette](https://github.com/xicodomingues/francinette)
+[Francinette](https://github.com/xicodomingues/francinette)
 
 **To standart test, go to the library path and run:**
 

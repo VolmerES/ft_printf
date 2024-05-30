@@ -105,6 +105,8 @@ I’m 42Network student at 42Madrid(Spain)
 
 You can track my progress through the common core at:
 
+https://profile.intra.42.fr/users/jdelorme
+
 More about:
 
 [https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)

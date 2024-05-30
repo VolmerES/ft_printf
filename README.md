@@ -103,7 +103,7 @@ The bonus part of the project is not included.
 
 I’m 42Network student at 42Madrid(Spain)
 
-You I track my progress through the common core at:
+You can track my progress through the common core at:
 
 More about:
 

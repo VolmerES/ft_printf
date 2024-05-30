@@ -59,12 +59,10 @@ make
 ### Otras reglas del makefile que puedes usar:
 
 ```bash
-make - compila los archivos obligatorios de libft
-make bonus - compila los archivos bonus de libft
-make all - compila todos los archivos (obligatorios + bonus)
+make - compila los archivos obligatorios de printf
 make clean - elimina todos los archivos *.o
 make fclean - elimina todos los archivos *.o y *.a (ejecutables)
-make re - usa fclean + all, recompila libft
+make re - usa fclean + all, recompila printf
 ```
 
 1. Para incluirlo en tu código, incluye la cabecera
@@ -79,7 +77,7 @@ make re - usa fclean + all, recompila libft
 
 [Francinette](https://github.com/xicodomingues/francinette)
 
-**To standart test, go to the library path and run:**
+**To standart test, go to printf path and run:**
 
 All standard tests should work perfectly.
 
